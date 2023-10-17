@@ -1,10 +1,11 @@
 import { Auth0Provider } from '@auth0/auth0-react';
-import { ChakraProvider, theme } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
 import type { AppProps } from 'next/app';
 import { useEffect } from 'react';
 
 import { DTIApolloProvider } from '@/providers/DTIApolloProvider';
 import { setupLogging } from '@/utils/setupLogging';
+import { theme } from '@/theme';
 
 const DressToImpress = ({ Component, pageProps }: AppProps) => {
   useEffect(() => setupLogging(), []);

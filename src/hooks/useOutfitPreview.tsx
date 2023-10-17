@@ -1,5 +1,5 @@
-import { Box, Text, useColorModeValue, useToast } from '@chakra-ui/react';
-import React, { useCallback, useEffect } from 'react';
+import { Text, useColorModeValue, useToast } from '@chakra-ui/react';
+import { useCallback, useEffect } from 'react';
 
 import { FullScreenCenter } from '@/components/FullScreenCenter';
 import { OutfitLayers } from '@/components/OutfitLayers';
@@ -97,9 +97,7 @@ export function useOutfitPreview({
   if (error || error2) {
     preview = (
       <FullScreenCenter>
-        <Text color={textColor}>
-          Warning!
-          <Box width={2} />
+        <Text color={textColor} p={3}>
           Could not load preview. Try again?
         </Text>
       </FullScreenCenter>

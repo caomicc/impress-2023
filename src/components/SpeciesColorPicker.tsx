@@ -70,11 +70,9 @@ function SpeciesColorPicker({
     a.name.localeCompare(b.name),
   );
 
-  const textColor = useColorModeValue('inherit', 'green.50');
-
   if ((loadingMeta || loadingValids) && !showPlaceholders) {
     return (
-      <Text color={textColor} textShadow="md">
+      <Text textShadow={"md"} alignSelf={'center'}>
         Loading species/color data…
       </Text>
     );
@@ -82,7 +80,7 @@ function SpeciesColorPicker({
 
   if (errorMeta || errorValids) {
     return (
-      <Text color={textColor} textShadow="md">
+      <Text textShadow={"md"} alignSelf={'center'}>
         Error loading species/color data.
       </Text>
     );

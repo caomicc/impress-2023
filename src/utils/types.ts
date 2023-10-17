@@ -1,3 +1,4 @@
+import { BoxProps } from "@chakra-ui/react";
 import { PropsWithChildren, ReactNode } from "react";
 
 declare global {
@@ -196,7 +197,7 @@ export type StartOutfitFormProps = {
   }) => void;
 };
 
-export type IMainProps = {
+export type IMainProps = BoxProps & {
   meta?: ReactNode;
   children: ReactNode;
 };
