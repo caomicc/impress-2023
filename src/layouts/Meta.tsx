@@ -2,12 +2,9 @@ import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 
 import { AppConfig } from '@/utils/AppConfig';
+import { IMetaProps } from '@/utils/types';
 
-type IMetaProps = {
-  title: string;
-  description: string;
-  canonical?: string;
-};
+
 
 const Meta = (props: IMetaProps) => (
   <>
