@@ -11,6 +11,8 @@ import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 import { AppConfig } from '@/utils/AppConfig';
 import Header from '@/components/Header';
+import { SubmitPetForm } from '@/components/SubmitPetForm';
+import { NewItemsSection } from '@/components/NewItems';
 
 const Index = () => {
   const [previewState, setPreviewState] = useState({
@@ -76,8 +78,8 @@ const Index = () => {
           </Box>
           <StartOutfitForm onChange={setPreviewState} />
           <Text fontStyle="italic" fontSize="sm">or</Text>
-          {/* <SubmitPetForm /> */}
-          {/* <NewItemsSection /> */}
+          <SubmitPetForm />
+          <NewItemsSection />
           {/* <FeedbackFormSection /> */}
           {/* <TestErrorSender /> */}
         </Stack>

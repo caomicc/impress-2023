@@ -207,3 +207,37 @@ export type IMetaProps = {
   description: string;
   canonical?: string;
 };
+
+export type ItemProps = {
+  id: number,
+  thumbnailUrl: string,
+  name: string,
+  tradeMatchingMode:  string,
+  currentUserWantsThis: boolean,
+  currentUserOwnsThis: boolean,
+}
+
+export type ItemThumbnailProps = {
+  item: ItemProps,
+  size: string,
+  isActive: boolean,
+  isDisabled: boolean,
+  focusSelector: string,
+  tradeMatchingMode: ItemProps["tradeMatchingMode"],
+}
+
+export type SquareItemCardProps = {
+  id: number,
+  name: string | ReactNode,
+  thumbnailImage: string | ReactNode,
+  footer: any,
+  minHeightNumLines?: number,
+  item?: ItemProps,
+  showRemoveButton?: boolean,
+  onRemove?: () => void,
+  tradeMatchingMode?: string,
+  removeButton?: ReactNode,
+  boxShadow: string | undefined,
+  currentUserWantsThis?: boolean,
+  currentUserOwnsThis?: boolean,
+}
